@@ -1,0 +1,1 @@
+export const SYSTEM_NOT_FOUND = 'Система не найдена'
