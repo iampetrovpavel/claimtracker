@@ -5,5 +5,8 @@ export class AuthDto {
     login: string;
 
     @IsString()
+    name: string;
+
+    @IsString()
     password: string;
 }

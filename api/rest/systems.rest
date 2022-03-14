@@ -1,1 +1,2 @@
 GET http://localhost:3000/api/system
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Q3QHRlc3QucnUgIiwiaWF0IjoxNjQ3Mjk4MTcxfQ.6gpqrwS7S43ZHKkgQhZj_KDJHBN9hrOCzkM4m6NpN0o

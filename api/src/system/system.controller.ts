@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, Param, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpException, HttpStatus, Param, Patch, Post, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
+import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
 import { CreateSystemDto } from './dto/create-system.dto';
 import { SYSTEM_NOT_FOUND } from './system.constants';
 import { SystemModel } from './system.model';
@@ -8,6 +9,7 @@ import { SystemService } from './system.service';
 export class SystemController {
     constructor(private readonly systemService: SystemService) { }
 
+    @UseGuards(JwtAuthGuard)
     @Get()
     async get() {
         return this.systemService.get()
